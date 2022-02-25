@@ -1,0 +1,35 @@
+@Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.getWriter().println("<!doctype html>" +
+                "                 <html>" +
+                "                 <head>" +
+                "                   <title>com.revature.DavidRiley.gjPokedex</title>" +
+                "                   <meta charset='UTF-8' />" +
+                "                 </head>" +
+                "                 <body>");
+        // The above getWriter() statement sets the Webpage up with its header, and to accept UTF-8 characters é, etc.
+
+Discord 2/14/22 6:57EST:
+mainClassName = 'com.revature.DavidRiley.gjPokedex.App'
+jar{
+    manifest{
+        attributes 'Main-Class' : mainClassName
+    }
+}
+
+"C:\Program Files\Java\jdk-17.0.1\bin\java.exe" -ea -Didea.test.cyclic.buffer.size=1048576 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=50729:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\plugins\junit\lib\junit-rt.jar;C:\Users\kevin\PRPT\P0-KHealy-Pokedex\out\test\test;C:\Users\kevin\PRPT\P0-KHealy-Pokedex\out\production\main;C:\Users\kevin\.gradle\caches\modules-2\files-2.1\org.apache.tomcat.embed\tomcat-embed-core\10.1.0-M10\57096840f13a4d747b4c22e55455eacae2dea104\tomcat-embed-core-10.1.0-M10.jar;C:\Users\kevin\.m2\repository\org\testng\testng\7.1.0\testng-7.1.0.jar;C:\Users\kevin\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\kevin\.m2\repository\com\google\inject\guice\4.1.0\guice-4.1.0-no_aop.jar;C:\Users\kevin\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\kevin\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\kevin\.m2\repository\com\google\guava\guava\19.0\guava-19.0.jar;C:\Users\kevin\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Users\kevin\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.7.2\f4b4079732a9c537983324cfa4e46655f21d2c56\junit-jupiter-api-5.7.2.jar;C:\Users\kevin\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\kevin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar" com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 com.revature.khealyTest.AppTest,DexServiceTest
+
+2022.02.17:
+CREATE TABLE POKEMON( ID INT PRIMARY KEY, NAME VARCHAR(255), TYPE1 VARCHAR(255), TYPE2 VARCHAR(255));
+INSERT INTO POKEMON VALUES(1,"Bulbasaur','Grass','Poison');
+SELECT * FROM POKEMON;
+
+2022.02.21:
+command to start sql shell in downloads folder:
+~/Downloads $ java -cp h2*.jar org.h2.tools.Shell 
+
+
+2022.02.21:
+sql> CREATE TABLE TEST AS SELECT * FROM CSVREAD('test.csv');
+CREATE TABLE TEST(ID INT PRIMARY KEY, NAME VARCHAR(255))
+    AS SELECT * FROM CSVREAD('test.csv');
