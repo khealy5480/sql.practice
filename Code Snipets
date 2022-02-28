@@ -33,3 +33,13 @@ command to start sql shell in downloads folder:
 sql> CREATE TABLE TEST AS SELECT * FROM CSVREAD('test.csv');
 CREATE TABLE TEST(ID INT PRIMARY KEY, NAME VARCHAR(255))
     AS SELECT * FROM CSVREAD('test.csv');
+	
+testing {
+    suites {
+        // Configure the built-in test suite
+        test {
+            // Use JUnit4 test framework
+            useJUnit('4.13.2')
+        }
+    }
+}
