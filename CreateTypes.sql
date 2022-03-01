@@ -109,3 +109,27 @@ CREATE TABLE TYPES (TYPEID INT);
 ALTER TABLE TYPES ADD TYPEID INT;
 INSERT INTO TYPES (TYPEID) VALUES (1);
 INSERT INTO TYPES (TYPEID) VALUES (2);
+
+--see Normalized table as a whole
+SELECT ID, NUMBER, TYPES.TYPENAME NAME1, TYPES.TYPENAME NAME2, TOTAL FROM POKEMON, TYPES WHERE TYPE1ID = TYPES.TYPEID INNER JOIN NAME2 WHERE TYPE2ID = TYPES.TYPEID;
+
+--see Normalized table as a whole syntax
+SELECT table name1.column name1,table name1.column name2,table name2.column name1,....
+FROM table name1
+(LEFT/RIGHT) JOIN table name2
+ON table name1.matching_column name = table name2. matching_column name
+(LEFT/RIGHT) JOIN table name3
+ON table name1.matching_column name = table name3. matching_column name
+(LEFT/RIGHT) JOIN table name4
+ON table name1.matching_column name = table name4. matching_column name
+...;
+
+--see Normalized table as a whole no2
+SELECT ID, NUMBER, TYPES.TYPENAME NAME1, TYPES.TYPENAME NAME2, TOTAL FROM POKEMON, TYPES
+
+
+ JOIN TYPES TYPE1ID = TYPES.TYPEID INNER JOIN NAME2 WHERE TYPE2ID = TYPES.TYPEID;
+ 
+ --see Normalized table as a whole (WORKS)
+SELECT ID, NUMBER, TYPES.TYPENAME NAME1, TYPES.TYPENAME NAME2, TOTAL FROM POKEMON JOIN TYPES ON POKEMON.TYPE1ID = TYPES.TYPEID 
+--INNER JOIN TYPES ON POKEMON.TYPE2ID = TYPES.TYPEID
