@@ -1,0 +1,228 @@
+
+kevin@LAPTOP-7BJG23T2 MINGW64 /
+$ cd
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~
+$ cd PRPT/sql.practice/
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ ls
+'Code Snipets'   CreateTypes.sql   Pokedex.sql   h2-2.1.210.jar   npd.csv
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ ls -alF
+total 2585
+drwxr-xr-x 1 kevin 197609       0 Feb 24 19:45  ./
+drwxr-xr-x 1 kevin 197609       0 Feb 22 23:34  ../
+drwxr-xr-x 1 kevin 197609       0 Feb 24 20:59  .git/
+-rw-r--r-- 1 kevin 197609    3303 Feb 26 22:52 'Code Snipets'
+-rw-r--r-- 1 kevin 197609    2099 Feb 27 21:51  CreateTypes.sql
+-rw-r--r-- 1 kevin 197609     523 Feb 24 11:22  Pokedex.sql
+-rw-r--r-- 1 kevin 197609 2531599 Feb 21 17:26  h2-2.1.210.jar
+-rw-r--r-- 1 kevin 197609   88635 Feb 14 11:08  npd.csv
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Code Snipets
+        modified:   CreateTypes.sql
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git add .
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git commit -m "Creation of unnamed functions 'see all tables', 'drop numbers and types', 'create distinct', 'select distinct', 'create types table', 'create backup'."
+[main 9e90a72] Creation of unnamed functions 'see all tables', 'drop numbers and types', 'create distinct', 'select distinct', 'create types table', 'create backup'.
+ 2 files changed, 71 insertions(+), 11 deletions(-)
+ rewrite CreateTypes.sql (62%)
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git remote add origin https://github.com/khealy5480/sql.practice.git
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git push -u origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 2.33 MiB | 1.90 MiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/khealy5480/sql.practice.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   CreateTypes.sql
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git add .
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git commit -m "The creating of the Pokemon Table, Normalized."
+[main 83d6c3c] The creating of the Pokemon Table, Normalized.
+ 1 file changed, 54 insertions(+), 3 deletions(-)
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 935 bytes | 935.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/khealy5480/sql.practice.git
+   9e90a72..83d6c3c  main -> main
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git commit -m "The creating of the Pokemon Table, Normalized. See normalized tabel as a whole." --amend
+[main ef9c0af] The creating of the Pokemon Table, Normalized. See normalized tabel as a whole.
+ Date: Tue Mar 1 01:09:34 2022 -0500
+ 1 file changed, 54 insertions(+), 3 deletions(-)
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   CreateTypes.sql
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git add .
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git commit -m "Normalized table as a whole.  using join statements."
+[main 7705e87] Normalized table as a whole.  using join statements.
+ 1 file changed, 24 insertions(+)
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git push
+To https://github.com/khealy5480/sql.practice.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/khealy5480/sql.practice.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git pull
+Auto-merging CreateTypes.sql
+CONFLICT (content): Merge conflict in CreateTypes.sql
+Automatic merge failed; fix conflicts and then commit the result.
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 2 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   CreateTypes.sql
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main|MERGING)
+$ git add .
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main|MERGING)
+$ git commit -m "Normalized table as a whole.  using join statements."
+[main b3708e7] Normalized table as a whole.  using join statements.
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 958 bytes | 958.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/khealy5480/sql.practice.git
+   83d6c3c..b3708e7  main -> main
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ git log
+commit b3708e7a998d6931cec6e73d52f48f75101756da (HEAD -> main, origin/main)
+Merge: 7705e87 83d6c3c
+Author: Skipuavforge <kevinsonlineshopping@verizon.net>
+Date:   Tue Mar 1 10:23:28 2022 -0500
+
+    Normalized table as a whole.  using join statements.
+
+commit 7705e8743513e32a968732103017decd93e6aa32
+Author: Skipuavforge <kevinsonlineshopping@verizon.net>
+Date:   Tue Mar 1 10:21:28 2022 -0500
+
+    Normalized table as a whole.  using join statements.
+
+commit ef9c0affd5dedb2de35c7f425ac55c98c405d770
+Author: Skipuavforge <kevinsonlineshopping@verizon.net>
+Date:   Tue Mar 1 01:09:34 2022 -0500
+
+    The creating of the Pokemon Table, Normalized. See normalized tabel as a whole.
+
+commit 83d6c3ceacdc962e5701767239434379016c1dd5
+Author: Skipuavforge <kevinsonlineshopping@verizon.net>
+Date:   Tue Mar 1 01:09:34 2022 -0500
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$ ^C
+
+kevin@LAPTOP-7BJG23T2 MINGW64 ~/PRPT/sql.practice (main)
+$
